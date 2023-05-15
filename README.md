@@ -26,7 +26,7 @@ To validate our config we run the following command. We need to validate our con
 
 Our config should look like this, because we commented all the `Step #7: Customize your rule set` out, so we can define later our own rules.
 
-![No Rules](Snort/screens/Pasted image 20230514171510.png)
+![Snort Rules](https://github.com/forty4sevenKaya/Snort_IDS-IPS/blob/main/screens/Pasted%20image%2020230514171510.png)
 
 
 
@@ -41,7 +41,7 @@ Just to start our lerning process, we should set our own rules. First of all we 
 #### ICMP Rule: 
 Here we created a simple ICMP alert rule for snort by using Snorpy. As you see, we just specify the `source_ip / source_port` (in our case any) and the `dest_ip` (this is edited in the `snort.conf`)  
 
-![[Pasted image 20230514175150.png]]
+![Snorpy](https://github.com/forty4sevenKaya/Snort_IDS-IPS/blob/main/screens/Pasted%20image%2020230514175150.png)
 
 Afterwards we can create much more rules, which can added into the `local.rules`. In our case we create some specific to at least secure our virtual machine against some common stuff. 
 
@@ -53,7 +53,7 @@ Afterwards we can create much more rules, which can added into the `local.rules`
 3. Block FTP Bruteforce Attempts:
 `alert tcp any any -> any 21 (msg:"FTP Bruteforce Attempt"; flow:to_server,established; threshold:type threshold, track by_src, count 3, seconds 60; sid:1000004; rev:1;)`
 
-![[Pasted image 20230514181106.png]]
+![Own Rules](https://github.com/forty4sevenKaya/Snort_IDS-IPS/blob/main/screens/Pasted%20image%2020230514181001.png)
 
 ## Step 4: Starting Snort 
 
