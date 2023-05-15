@@ -26,7 +26,8 @@ To validate our config we run the following command. We need to validate our con
 
 Our config should look like this, because we commented all the `Step #7: Customize your rule set` out, so we can define later our own rules.
 
-![[Pasted image 20230514171510.png]]
+![No Rules](Snort/screens/Pasted image 20230514171510.png)
+
 
 
 
