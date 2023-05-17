@@ -1,3 +1,6 @@
+This is a simple playground to set-up a IDS. 
+
+
 # Enviroment
 
 ##### Ubuntu 64-Bit 
