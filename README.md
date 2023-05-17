@@ -63,6 +63,7 @@ Afterwards we can create much more rules, which can added into the `local.rules`
 
 ![Own Rules](https://github.com/forty4sevenKaya/Snort_IDS-IPS/blob/main/screens/Pasted%20image%2020230514181001.png)
 
-## Step 4: Starting Snort 
+**Step 4**: _starting Snort_ 
 
-sudo snort -q -l /var/log/snort/ -i ens33 -A console -c /etc/snort/snort.conf 
+- `sudo snort -q -l /var/log/snort/ -i ens33 -A console -c /etc/snort/snort.conf`
+ 	 
