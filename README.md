@@ -11,10 +11,10 @@ Our environment mirrors a simple Ubuntu environment (VM) as the user system and 
 - Attacker System Linux 
 
 
-# Configuration
+## `✋` Configuration
 Snort comes with a wide range of predefined rule sets, all of which perform great detections. For understanding, however, it is useful to comment out these rules and develop your own IDS. This way, you can understand simple detection measures and exploit the predefined complex rules in an adapted way later on. 
 
-## Step 1: setting the interface correctly
+**Step 1**: _setting the interface correctly_
 Within /etc/snort/snort.conf we can establish our initial configurations to allow Snort to read our traffic.
 
 - setting `ipvar HOME_NET 192.* * *.* * *.0/24 
@@ -23,7 +23,7 @@ Within /etc/snort/snort.conf we can establish our initial configurations to allo
 	- you can find this unter `Step #7: Customize your rule set`
 
 
-## Step 2: Testing our config 
+**Step 2**: _Testing our config_ 
 To validate our config we run the following command. We need to validate our configurations before each startup of Snort as IDS/IPS. 
 
 - `sudo snort -T -i ens33 -c /etc/snort/snort.conf`
@@ -34,8 +34,7 @@ Our config should look like this, because we commented all the `Step #7: Customi
 
 
 
-
-## Step 3: Adding our rules
+**Step 3**: _Adding our rules_
 Now, to define our own rules, we can break down the existing rules as an aid, read the official documentation, or use a tool to generate the rules. 
 
 The tool Snorpy is an excellent start to create complex rules as easy as possible. The generation can be followed step by step. Ideal for understanding.
