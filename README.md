@@ -23,8 +23,8 @@ Within /etc/snort/snort.conf we can establish our initial configurations to allo
 	- you can find this unter `Step #7: Customize your rule set`
 
 
-**Step 2**: 
-_Testing our config_ 
+**Step 2**: _Testing our config_ 
+
 To validate our config we run the following command. We need to validate our configurations before each startup of Snort as IDS/IPS. 
 
 - `sudo snort -T -i ens33 -c /etc/snort/snort.conf`
@@ -35,8 +35,8 @@ Our config should look like this, because we commented all the `Step #7: Customi
 
 
 
-**Step 3**: 
-_Adding our rules_
+**Step 3**: _Adding our rules_
+
 Now, to define our own rules, we can break down the existing rules as an aid, read the official documentation, or use a tool to generate the rules. 
 
 The tool Snorpy is an excellent start to create complex rules as easy as possible. The generation can be followed step by step. Ideal for understanding.
