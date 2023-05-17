@@ -46,7 +46,7 @@ The tool Snorpy is an excellent start to create complex rules as easy as possibl
 + to add our rules we can go to `/etc/snort/rules/local.rules` 
 	+ typically there are no roles (empty) 
 
-> ICMP Rule: 
+#### ICMP Rule: 
 Here we created a simple ICMP alert rule for snort by using Snorpy. As you see, we just specify the `source_ip / source_port` (in our case any) and the `dest_ip` (this is edited in the `snort.conf`)  
 
 ![Snorpy](https://github.com/forty4sevenKaya/Snort_IDS-IPS/blob/main/screens/Pasted%20image%2020230514175150.png)
