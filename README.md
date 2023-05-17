@@ -1,7 +1,7 @@
 This is a simple playground to set-up a IDS. 
 
 
-# Enviroment
+## `🪄` Enviroment
 Our environment mirrors a simple Ubuntu environment (VM) as the user system and a Kali environment (VM) as the potential attacker. The goal is to seal the Ubuntu machine against information gathering and not to reveal any information to the attacking system.  For this we want to initially detect the attacks (IDS) before we stop them in the next step by preventive measures (IPS).
 
 ##### Ubuntu 64-Bit 
