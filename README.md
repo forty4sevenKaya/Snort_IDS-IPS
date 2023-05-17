@@ -15,6 +15,7 @@ Our environment mirrors a simple Ubuntu environment (VM) as the user system and 
 Snort comes with a wide range of predefined rule sets, all of which perform great detections. For understanding, however, it is useful to comment out these rules and develop your own IDS. This way, you can understand simple detection measures and exploit the predefined complex rules in an adapted way later on. 
 
 **Step 1**: _setting the interface correctly_
+
 Within /etc/snort/snort.conf we can establish our initial configurations to allow Snort to read our traffic.
 
 - setting `ipvar HOME_NET 192. _ . _ .0/24`
@@ -45,7 +46,7 @@ The tool Snorpy is an excellent start to create complex rules as easy as possibl
 + to add our rules we can go to `/etc/snort/rules/local.rules` 
 	+ typically there are no roles (empty) 
 
-#### ICMP Rule: 
+> ICMP Rule: 
 Here we created a simple ICMP alert rule for snort by using Snorpy. As you see, we just specify the `source_ip / source_port` (in our case any) and the `dest_ip` (this is edited in the `snort.conf`)  
 
 ![Snorpy](https://github.com/forty4sevenKaya/Snort_IDS-IPS/blob/main/screens/Pasted%20image%2020230514175150.png)
