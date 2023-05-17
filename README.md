@@ -2,6 +2,11 @@ This is a simple playground to set-up a IDS.
 
 
 # Enviroment
+Our environment mirrors a simple Ubuntu environment (VM) as the user system and a Kali environment (VM) as the potential attacker. 
+
+The goal is to seal the Ubuntu machine against information gathering and not to reveal any information to the attacking system. 
+
+For this we want to initially detect the attacks (IDS) before we stop them in the next step by preventive measures (IPS).
 
 ##### Ubuntu 64-Bit 
 - Snort System 
@@ -10,19 +15,19 @@ This is a simple playground to set-up a IDS.
 - Attacker System Linux 
 
 
-# Configuration 
+# Configuration
+Snort comes with a wide range of predefined rule sets, all of which perform great detections. For understanding, however, it is useful to comment out these rules and develop your own IDS. This way, you can understand simple detection measures and exploit the predefined complex rules in an adapted way later on. 
 
-## Step 1: /etc/snort/snort.conf
+## Step 1: setting the interface correctly
+Within /etc/snort/snort.conf we can establish our initial configurations to allow Snort to read our traffic.
 
-- setting `ipvar HOME_NET 192.*.*.0/24 
-- setting `ipvar EXTERNAL_NET any`
+- setting `ipvar HOME_NET 192.* * *.* * *.0/24 
+- setting `ipvar EXTERNAL_NET any` 	
 - commenting out the pre rules of snort  
 	- you can find this unter `Step #7: Customize your rule set`
 
 
-
 ## Step 2: Testing our config 
-
 To validate our config we run the following command. We need to validate our configurations before each startup of Snort as IDS/IPS. 
 
 - `sudo snort -T -i ens33 -c /etc/snort/snort.conf`
@@ -35,8 +40,10 @@ Our config should look like this, because we commented all the `Step #7: Customi
 
 
 ## Step 3: Adding our rules
+Now, to define our own rules, we can break down the existing rules as an aid, read the official documentation, or use a tool to generate the rules. 
 
-Just to start our lerning process, we should set our own rules. First of all we define a simple ICMP alert. Of course we can read the docs and manuals, but we can also use [Snorpy 2.0 - Web Based Snort Rule Creator](http://snorpy.cyb3rs3c.net/))
+The tool Snorpy is an excellent start to create complex rules as easy as possible. The generation can be followed step by step. Ideal for understanding.
+[Snorpy 2.0 - Web Based Snort Rule Creator](http://snorpy.cyb3rs3c.net/))
 
 + to add our rules we can go to `/etc/snort/rules/local.rules` 
 	+ typically there are no roles (empty) 
